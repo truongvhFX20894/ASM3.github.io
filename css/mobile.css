@@ -1,0 +1,83 @@
+@media only screen and (max-width: 620px) {
+  /* PHẦN NAVBAR */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-item-img {
+    display: none;
+  }
+
+  /* PHẦN THÔNG TIN CÁ NHÂN */
+  #target {
+    margin: 70px 40px 40px 40px;
+  }
+  #personal-info {
+    margin: 50px 40px 40px 40px;
+  }
+  .container-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .ski {
+    order: 1;
+  }
+  .lan {
+    order: 2;
+  }
+  .act {
+    order: 3;
+  }
+  .edu {
+    order: 4;
+  }
+  .hob {
+    order: 5;
+  }
+
+  /* THÔNG TIN NGHỀ NGHIỆP */
+  #job-info .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .job-info-item {
+    grid-template-rows: 70px auto;
+    width: 100%;
+  }
+
+  /* SỞ THÍCH */
+  .hobby-list {
+    height: auto;
+  }
+  .hobby-ic {
+    display: inline-block;
+    margin-left: 35px;
+  }
+
+  /* DỰ ÁN */
+  #project .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+  .footer-link span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  section > .container {
+    /* Set lại kích thước container cho màn hình dưới 575px */
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 10px 30px;
+  }
+  /* SỞ THÍCH */
+  .hobby-ic {
+    margin-left: 17px;
+  }
+}

@@ -1,0 +1,116 @@
+@media only screen and (max-width: 992px) {
+  /* PHẦN NAVBAR */
+  .navbar-item-img {
+    display: none;
+  }
+
+  /* PHẦN THÔNG TIN CÁ NHÂN */
+  #target {
+    margin: 50px 20px 20px 20px;
+    font-size: 18px;
+  }
+  #personal-info {
+    margin: 50px 20px 20px 20px;
+    font-size: 18px;
+  }
+
+  /* THÔNG TIN NGHỀ NGHIỆP */
+  .exp {
+    grid-area: area1;
+  }
+  .edu {
+    grid-area: area2;
+  }
+  .act {
+    grid-area: area3;
+  }
+  .hob {
+    grid-area: area4;
+  }
+  .lan {
+    grid-area: area5;
+  }
+  .ski {
+    grid-area: area6;
+  }
+  #job-info .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "area1 area3" "area6 area2" "area5 area4";
+  }
+  .job-info-item {
+    grid-template-rows: 70px auto 30px;
+    width: 100%;
+  }
+
+  /* CHỨNG CHỈ */
+  .cert-detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .web img,
+  .javascript img,
+  .database img {
+    width: 100%;
+  }
+
+  /* DỰ ÁN */
+  .p-title h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .p-info {
+    gap: 10px;
+  }
+  .p-time {
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+  .p-title h3,
+  .p-info,
+  .p-table {
+    font-size: 13px;
+  }
+  .table-desciption,
+  .table-mission,
+  .table-tech {
+    width: 80px;
+  }
+  td {
+    width: auto;
+  }
+
+  /* FOOTER */
+}
+
+@media only screen and (max-width: 768px) {
+  /* CHỨNG CHỈ */
+  .cert-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .cert-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .javascript {
+    border-left: none;
+    border-top: 2px solid #d6c08d;
+    padding-top: 20px;
+  }
+  .database {
+    padding-bottom: 20px;
+  }
+  .web img,
+  .javascript img,
+  .database img {
+    width: 100%;
+  }
+
+  /* SỞ THÍCH */
+  .hobby-list {
+    height: 100px;
+  }
+}

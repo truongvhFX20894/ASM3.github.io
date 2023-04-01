@@ -1,0 +1,26 @@
+/* Thiết kế màn hình cho tablet */
+@media only screen and (max-width: 992px) {
+  .container-info,
+  .workline-info,
+  .workline {
+    display: flex;
+    flex-direction: column;
+  }
+  .scope {
+    order: 1;
+  }
+  .team {
+    order: 2;
+  }
+  .primary {
+    order: 3;
+  }
+  .timeline {
+    order: 4;
+  }
+  .time {
+    width: 10%;
+    height: 30%;
+    padding-top: 0px;
+  }
+}

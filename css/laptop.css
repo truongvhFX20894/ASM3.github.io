@@ -1,0 +1,415 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bolder;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+
+  padding: 30px 50px;
+}
+
+/* TẠO KIỂU CHO BANNER */
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  filter: alpha(opacity=50);
+}
+
+#banner {
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 500px;
+}
+
+.banner-text {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+}
+
+/* TẠO KIỂU CHO NAVBAR */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e9e6e6;
+}
+/* căn chỉnh và tạo border cho các nút trong navbar */
+.navbar-item {
+  text-align: center;
+  height: 41px;
+  color: #777272;
+  border-left: 1px solid #e9e6e6;
+  border-right: 1px solid #e9e6e6;
+}
+.navbar-item-img {
+  flex-basis: 300px;
+  position: relative;
+}
+.avatar {
+  /* flex-basis: 300px; */
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -50px;
+  left: 25%;
+}
+.avatar:hover {
+  width: 160px;
+  height: 160px;
+  border: 5px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -55px;
+  left: 23%;
+}
+/* tạo kiểu cho các nút item trong navbar */
+.navbar-item-a {
+  font-size: 12px;
+  text-decoration: none;
+  width: 150px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-item-a:hover {
+  background-color: #f7f7f7;
+  color: black;
+  font-size: 14px;
+}
+
+/* MỤC TIÊU NGHỀ NGHIỆP VÀ THÔNG TIN CÁ NHÂN*/
+/* tạo grid */
+.container-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* mục tiêu nghề nghiệp */
+#target {
+  justify-self: end;
+  text-align: justify;
+  margin: 70px 40px 40px 40px;
+  font-size: 18px;
+}
+/* thông tin cá nhân */
+#personal-info {
+  align-self: flex-start;
+  margin: 70px 40px 40px 40px;
+  font-size: 18px;
+}
+/* chỉnh sửa phần list thông tin cá nhân */
+.mt-40 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+#target h1,
+#personal-info h1 {
+  text-align: left;
+}
+/* ẩn thông tin cho tới khi submit email */
+.hidden-info {
+  display: none;
+}
+
+/* THÔNG TIN NGHỀ NGHIỆP */
+/* ẩn nội dung phần thông tin nghề nghiệp */
+.viewmore {
+  display: none;
+}
+.viewless {
+  display: none;
+  align-items: flex-end;
+}
+/* tạo grid */
+#job-info .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  justify-items: space-around;
+  align-items: center;
+}
+/* chỉnh sửa chung từng item trong grid */
+.job-info-item {
+  border: 1px solid #e9e6e6;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 70px auto 30px;
+  height: 100%;
+  padding: 20px;
+}
+/* căn chỉnh tiêu đề từng item */
+.title-item {
+  align-self: center;
+  gap: 20px;
+  font-family: sans-serif;
+}
+/* căn chỉnh icon trong từng item */
+.ic-toolbox,
+.ic-pencil,
+.ic-telescope,
+.ic-tools-2,
+.ic-mic {
+  justify-self: center;
+  align-self: center;
+  font-size: 30px;
+}
+/* căn chỉnh hình thức phần nội dung của từng item */
+.detail-item,
+.detail-item-4 {
+  grid-column: 1/3;
+  display: none; /* ẩn thông tin cho đến khi bấm View more mới hiện ra */
+}
+.list-item {
+  list-style: none;
+  position: relative;
+  font-size: 14px;
+}
+.detail-list-item {
+  list-style: none;
+}
+/* tạo chấm timeline */
+.list-item h3::before {
+  position: absolute;
+  content: "\2022";
+  left: -20px;
+  font-size: 22px;
+  color: #199cdb;
+}
+/* hightlight chữ hiện tại */
+.present::after {
+  content: "Hiện tại";
+  font-style: italic;
+  background-color: #199cdb;
+  color: #f7f7f7;
+  border-radius: 20%;
+  padding: 3px 15px;
+}
+
+/* tạo kiểu cho item sở thích */
+/* .hobby-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 90px 30px;
+  align-items: center;
+  justify-items: center;
+  row-gap: 10px;
+  grid-column: 1/3;
+  height: auto;
+} */
+.hobby-ic {
+  border: 2px solid rgb(0, 140, 255);
+  border-radius: 50%;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.ic-megaphone {
+  padding-top: 12px;
+}
+.ic-strategy {
+  padding-top: 12px;
+}
+.ic-hotairballoon {
+  padding-top: 12px;
+}
+.ic-basket {
+  padding-top: 12px;
+}
+.hobby-name {
+  font-size: 11px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.hic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Tạo thang điểm cho phần Ngôn ngữ và Kỹ năng */
+.spanb {
+  background: #199cdb;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+}
+.spang {
+  background: #e9e6e6;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+}
+
+/* CHỨNG CHỈ VÀ GIẢI THƯỞNG */
+/* .cert-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 1fr 1fr;
+} */
+.cert-title {
+  /* grid-column: 1/3; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.cert-detail {
+  display: flex;
+  gap: 20px;
+}
+.web {
+  margin-bottom: 20px;
+}
+.javascript {
+  border-left: 2px solid #d6c08d;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.database {
+  padding-top: 20px;
+  border-top: 2px solid #d6c08d;
+}
+.web img,
+.javascript img,
+.database img {
+  width: 170px;
+}
+.non {
+  padding-top: 20px;
+  border-top: 2px solid #d6c08d;
+}
+.cert-detail h3 {
+  font-weight: 540;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+/* DỰ ÁN */
+/* #project .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+  column-gap: 20px;
+}
+#project .section-title {
+  grid-column: 1/4;
+} */
+/* tạo kiểu cho item project*/
+.project-1,
+.project-2,
+.project-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr;
+}
+.p-img {
+  width: 100%;
+  /* object-fit: cover; */
+}
+.p-title {
+  border: 1px solid #e9e6e6;
+  border-top: none;
+}
+.p-title h3 {
+  font-weight: 500;
+  font-size: 16;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+.p-info {
+  display: flex;
+  font-size: 14px;
+  position: relative;
+  gap: 20px;
+  border: 1px solid #e9e6e6;
+  border-top: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* hightlight mốc thời gian */
+.p-time {
+  background-color: #199cdb;
+  color: #f7f7f7;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+.p-info-p {
+  align-self: center;
+  margin-bottom: 0px;
+}
+/* tạo border cho bảng */
+.p-table {
+  font-size: 14px;
+  border: 1px solid #e9e6e6;
+  border-collapse: collapse;
+  /* line-height: 1.1; */
+}
+td {
+  border-bottom: 1px solid #e9e6e6;
+  padding: 5px;
+  text-align: justify;
+}
+.table-desciption,
+.table-mission,
+.table-tech {
+  width: 100px;
+}
+
+/* FOOTER */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.footer-link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+.icon-facebook-circled,
+.icon-linkedin-circled,
+.icon-github-circled {
+  color: #199cdb;
+  font-size: 200%;
+}

@@ -1,0 +1,48 @@
+.container-info {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 20px;
+}
+
+.timeline {
+  grid-row: -3/-1;
+  grid-column: 3/4;
+}
+
+.h3,
+.workline-info {
+  border-bottom: 1px solid #e9e6e6;
+}
+
+.time {
+  border-radius: 50%;
+  border: 2px solid #be03f7;
+  width: 30%;
+  height: 80%;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  background-color: #c8a8fa;
+  font-size: 30px;
+  color: #e9e6e6;
+  padding-top: 11px;
+}
+
+.icon-fa {
+  display: flex;
+  font-size: 30px;
+  align-self: center;
+  justify-content: center;
+  height: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .time {
+    width: 40%;
+    height: 75%;
+    padding-top: 8px;
+  }
+}
